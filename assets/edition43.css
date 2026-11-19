@@ -1,0 +1,5 @@
+/* Edition 43: show only the existing comparison matrix inline */
+.lp37-site .lp-membership{padding-top:55px}
+.lp37-site .lp43-inline{margin-top:0}
+.lp37-site .lp43-inline .lp-compare-top{margin-bottom:24px}
+@media(max-width:700px){.lp37-site .lp-membership{padding-top:36px}}

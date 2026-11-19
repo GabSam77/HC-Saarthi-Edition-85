@@ -1,0 +1,5 @@
+/* Edition 33: clear hierarchy and focused services entry */
+.e30-op .e30-categories{margin-top:clamp(20px,2.6vw,36px)}
+.hx-service-lead-copy .hx-service-steps{margin-top:clamp(24px,3vw,42px);padding-top:22px;border-top:1px solid rgba(19,53,79,.13)}
+.hx-service-lead-copy .hx-service-lead-note{max-width:36ch;line-height:1.6}
+@media(max-width:700px){.e30-op .e30-categories{margin-top:18px}.hx-service-lead-copy .hx-service-steps{margin-top:20px}}

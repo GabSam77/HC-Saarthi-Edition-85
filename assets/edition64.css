@@ -1,0 +1,193 @@
+/* Edition 64 */
+
+/* ---------- Overview: decisions and key dates in one list ---------- */
+.cio64-agenda{margin-top:18px}
+.cio64-sub{margin:4px 0 0;font-size:12.5px;color:#7a8fa0}
+.cio64-list{display:flex;flex-direction:column;margin-top:4px}
+.cio64-row{display:grid;grid-template-columns:56px minmax(0,1fr) 110px 120px 90px;gap:18px;align-items:center;width:100%;padding:12px 0;border:0;border-bottom:1px solid #edf1f4;background:none;text-align:left;font:inherit;color:inherit}
+button.cio64-row{cursor:pointer}
+button.cio64-row:hover{background:#fafcfd}
+.cio64-row:last-child{border-bottom:0}
+.cio64-when{display:flex;flex-direction:column;align-items:center;justify-content:center;width:56px;height:50px;border-radius:9px;background:#f2f6f9;border:1px solid #e1e8ee}
+.cio64-when b{font-size:15px;line-height:1.1;color:#102f49;font-weight:700}
+.cio64-when small{font-size:10.5px;color:#7a8fa0;margin-top:2px}
+.cio64-what b{display:block;font-size:14px;font-weight:600;color:#102f49}
+.cio64-what small{display:block;margin-top:3px;font-size:12px;color:#7a8fa0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cio64-kind{justify-self:start;padding:4px 9px;border-radius:999px;font-size:11px;font-weight:650;white-space:nowrap}
+.cio64-kind.dec{background:#eaf1f7;color:#1f5f8b}
+.cio64-kind.date{background:#f6f0e6;color:#8a6224}
+.cio64-amt{text-align:right}
+.cio64-amt b{display:block;font-size:14px;color:#102f49;font-variant-numeric:tabular-nums}
+.cio64-amt small{display:block;font-size:11px;color:#7a8fa0;margin-top:2px}
+.cio64-state{text-align:right}
+.cio64-links{display:inline-flex;gap:18px}
+@media (max-width:760px){.cio64-row{grid-template-columns:50px minmax(0,1fr) auto;gap:12px}.cio64-kind,.cio64-state{display:none}.cio64-when{width:50px}}
+
+/* ---------- Asset Register ---------- */
+.cio51-risk{padding:16px 18px}
+.cio64-foot{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.cio64-foot>span:first-child{flex:1 1 420px;font-size:12px;line-height:1.5;color:#7a8fa0}
+.cio64-exports{display:inline-flex;gap:10px;flex-wrap:wrap}
+.cio64-export{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid #cfdbe4;border-radius:8px;background:#fff;color:#102f49;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.cio64-export svg{width:15px;height:15px}
+.cio64-export:hover{border-color:#102f49;background:#f6f9fb}
+
+/* ---------- My Documents ---------- */
+.lk64-tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.lk64-tools .lk-search{margin:0}
+.lk64-tools .lk-index{white-space:nowrap}
+.lk-library-title{align-items:flex-end}
+.lk-library-title .lk-search>span:not(.sr-only){display:none}
+.lk64-cell{display:inline-flex;align-items:center;gap:8px}
+.lk64-ok{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#e7f5ee;color:#1f7a5a;border:1px solid #c6e6d6}
+.lk64-ok svg{width:15px;height:15px}
+.lk64-acts{display:inline-flex;border:1px solid #dbe5ed;border-radius:8px;overflow:hidden;background:#fff}
+.lk64-acts a,.lk64-acts button{display:grid;place-items:center;width:30px;height:28px;padding:0;border:0;background:none;color:#24465f;cursor:pointer}
+.lk64-acts>*+*{border-left:1px solid #dbe5ed}
+.lk64-acts svg{width:16px;height:16px}
+.lk64-acts a:hover,.lk64-acts button:hover{background:#102f49;color:#fff}
+.lk64-cell small{font-size:11px;color:#7a8fa0}
+.lk64-key-ic{display:inline-grid;place-items:center;width:22px;height:20px;border:1px solid #dbe5ed;border-radius:5px;color:#24465f}
+.lk64-key-ic svg{width:13px;height:13px}
+.lk-search .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.lk64-tools .lk-search input{width:260px;min-height:42px}.lk64-tools .lk-index{min-height:42px}
+
+/* ---------- Edition 65 ---------- */
+.cio65-add{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid #cfdbe4;border-radius:8px;background:#fff;color:#102f49;font:inherit;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.cio65-add svg{width:15px;height:15px}
+.cio65-add:hover{border-color:#102f49;background:#f6f9fb}
+.cio65-head{padding:10px 0!important;border-bottom:1px solid #e1e8ee!important}
+.cio65-head span{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7a8fa0}
+.cio65-head span:first-child{text-align:center}
+.cio65-head span:nth-child(4),.cio65-head span:nth-child(5){text-align:right}
+@media (max-width:760px){.cio65-head{display:none!important}}
+.cio65-summary{display:flex;align-items:baseline;gap:18px;margin:2px 2px 14px;flex-wrap:wrap}
+.cio65-summary h2{margin:0;font-size:17px;font-weight:650;color:#102f49;white-space:nowrap}
+.cio65-summary p{flex:1 1 480px;margin:0;font-size:13.5px;line-height:1.55;color:#4f687b}
+
+/* ---------- Edition 66 ---------- */
+.cio64-row{grid-template-columns:56px minmax(0,1fr) 100px 100px 190px}
+.cio65-head span:nth-child(5){text-align:left}
+.cio66-rem{font-size:12.5px;line-height:1.4;color:#5d778b}
+.cio66-rem .cio-task-state{margin-right:4px}
+.cio66-dash{color:#b5c2cc}
+.cio64-agenda .cio64-list{padding-bottom:4px}
+@media (max-width:760px){.cio64-row{grid-template-columns:50px minmax(0,1fr) auto}.cio66-rem{display:none}}
+
+/* Documents: View / Add buttons */
+.lk63-table th{white-space:normal!important;line-height:1.3;min-width:86px;vertical-align:bottom}
+.lk63-table th:first-child{min-width:200px}
+.lk63-table td{padding:12px 10px}
+.lk66-view,.lk66-add{display:inline-flex;align-items:center;gap:5px;padding:6px 11px 6px 8px;border-radius:999px;font:inherit;font-size:12px;font-weight:650;text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s,color .15s,box-shadow .15s}
+.lk66-view{border:1px solid #9fd3bb;background:#e9f6ef;color:#17694c}
+.lk66-view:hover{background:#17694c;border-color:#17694c;color:#fff;box-shadow:0 4px 12px rgba(23,105,76,.22)}
+.lk66-add{border:1px dashed #e0a9b3;background:#fff;color:#b52c41}
+.lk66-add:hover{border-style:solid;border-color:#b52c41;background:#b52c41;color:#fff;box-shadow:0 4px 12px rgba(181,44,65,.2)}
+.lk66-view svg,.lk66-add svg{width:14px;height:14px}
+.lk66-view:focus-visible,.lk66-add:focus-visible{outline:2px solid #102f49;outline-offset:2px}
+.lk66-mini{pointer-events:none;vertical-align:middle}
+.lk63-table td small{margin-left:4px;font-size:11px;color:#7a8fa0;display:inline}
+.lk63-table th{min-width:0;padding:12px 8px!important}
+.lk63-table th:first-child,.lk63-table td:first-child{position:sticky;left:0;z-index:1;background:#fff;box-shadow:1px 0 0 #edf1f4}
+.lk63-table thead th:first-child{background:#f4f7fa;z-index:2}
+.lk63-table th:first-child{min-width:190px;padding-left:16px!important}
+.lk63-table td{padding:12px 6px}
+.lk66-view,.lk66-add{padding:5px 9px 5px 7px;font-size:11.5px}
+
+/* ---------- Edition 67: About HDFC Capital alignment ---------- */
+#about.lp42-about{align-items:stretch!important;column-gap:64px!important}
+#about .lp37-about-image{height:100%;min-height:0;margin:0;align-self:stretch}
+#about .lp37-about-image img{width:100%;height:100%;object-fit:cover;display:block}
+#about .lp37-about-copy{display:flex;flex-direction:column;justify-content:center;padding:0}
+#about .lp37-about-copy .lp-eyebrow{margin-top:0}
+#about .lp37-about-copy p:last-of-type{margin-bottom:0}
+#about .lp37-link{align-self:flex-start;margin-top:24px;gap:10px;padding-right:0}
+@media (max-width:900px){#about .lp37-about-image{height:auto;aspect-ratio:4/3}}
+
+/* ---------- Edition 67: documents table ---------- */
+.lk63-table th,.lk63-table td{border-left:1px solid #e9eef2}
+.lk63-table th:first-child,.lk63-table td:first-child{border-left:0}
+.lk63-table thead th{text-align:center!important;vertical-align:middle!important}
+.lk63-table thead th:first-child{text-align:left!important}
+.lk63-table td{text-align:center}
+.lk63-table td:first-child{text-align:left}
+#about.lp42-about{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:64px!important}
+.lk63-table td:first-child{padding-left:16px!important;padding-right:14px!important}
+@media (max-width:900px){#about.lp42-about{grid-template-columns:1fr!important;gap:28px!important}}
+#about .lp37-about-image{aspect-ratio:auto!important;width:100%;max-height:none!important}@media (max-width:900px){#about .lp37-about-image{aspect-ratio:4/3!important;height:auto!important}}
+
+/* ---------- Edition 69 ---------- */
+/* Holdings: compact */
+.cio45-comp .cio-capital-chart{display:grid!important;grid-template-columns:190px minmax(0,1fr)!important;gap:32px!important;min-height:0!important;padding:0!important;align-items:center}
+.cio45-comp .cio-orbit{max-width:190px!important;min-width:0!important;margin:0 auto}
+.cio45-comp .cio45-legend{gap:6px}
+.cio45-comp .cio45-row{padding:7px 12px!important;min-height:0!important}
+.cio45-comp .cio45-thumb{width:34px!important;height:34px!important}
+.cio45-comp .cio45-legend.cio69-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:10px}
+.cio45-comp .cio45-legend.cio69-two .cio45-legend-foot{grid-column:1/-1}
+.cio45-comp .cio45-legend.cio69-two .cio45-row{grid-template-columns:12px minmax(0,1fr) auto auto!important}
+.cio45-comp .cio45-legend.cio69-two .cio45-share{display:none!important}
+.cio45-comp .cio-section-heading{margin-bottom:10px}
+@media (max-width:760px){.cio45-comp .cio-capital-chart{grid-template-columns:1fr!important}.cio45-comp .cio45-legend.cio69-two{grid-template-columns:1fr}}
+/* Key decisions and dates table */
+.cio69-agenda{margin-top:18px}
+.cio69-agenda .cio-section-heading{margin-bottom:14px}
+.cio69-table td{padding:12px 16px}
+.cio69-date{white-space:nowrap;font-weight:600;color:#102f49;font-variant-numeric:tabular-nums}
+.cio69-item{padding:0;border:0;background:none;font:inherit;font-weight:600;color:#102f49;text-align:left;cursor:pointer}
+.cio69-item:hover{color:#b52c41;text-decoration:underline;text-underline-offset:3px}
+.cio69-item-text{font-weight:600;color:#102f49}
+.cio69-rem{font-size:12.5px;color:#5d778b}
+.cio69-due .cio69-date{color:#b52c41}
+
+/* ---------- Edition 70 ---------- */
+.cio69-date b{display:block;font-weight:600;color:inherit}
+.cio69-date small{display:block;margin-top:2px;font-size:11.5px;font-weight:500;color:#7a8fa0}
+.cio69-due .cio69-date small{color:#c9707e}
+.cio69-item{text-decoration:underline;text-decoration-style:dotted;text-decoration-color:#9fb4c4;text-decoration-thickness:1.5px;text-underline-offset:4px;transition:color .15s,text-decoration-color .15s}
+.cio69-item:hover,.cio69-item:focus-visible{color:#b52c41;text-decoration-style:solid;text-decoration-color:#b52c41;outline:none}
+.cio69-table tbody tr:has(.cio69-item){cursor:pointer}
+.cio69-table tbody tr:has(.cio69-item):hover td{background:#f6f9fb}
+
+/* ---------- Edition 72 ---------- */
+.cio69-table th:first-child,.cio69-date{text-align:center}
+.cio69-table tbody tr.cio69-due td{background:#fdf1f3}
+.cio69-table tbody tr.cio69-due:hover td{background:#fbe7ea}
+.cio69-table tbody tr.cio69-due td:first-child{box-shadow:inset 3px 0 0 #b52c41}
+.cio69-due .cio69-date b{color:#b52c41}
+.cio69-item{text-decoration:none!important;color:#1f5f8b;font-weight:650}
+.cio69-item:hover,.cio69-item:focus-visible{color:#b52c41;text-decoration:underline!important;text-decoration-style:solid!important;text-decoration-color:#b52c41!important;text-underline-offset:3px}
+.cio69-table tbody tr:has(.cio69-item):hover .cio69-item{color:#b52c41}
+
+/* ---------- Edition 73: solid underline on clickable decisions ---------- */
+.cio69-item{text-decoration:underline!important;text-decoration-style:solid!important;text-decoration-color:#9fbbd0!important;text-decoration-thickness:1.5px!important;text-underline-offset:4px!important}
+.cio69-item:hover,.cio69-item:focus-visible,.cio69-table tbody tr:has(.cio69-item):hover .cio69-item{text-decoration-color:#b52c41!important}
+.cio-three-metrics>div{padding:18px 22px!important}
+
+/* ---------- Edition 77: one header style for Asset Register / My Documents / My Services ---------- */
+.sub77-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin:6px 0 20px}
+.sub77-head>div:first-child{flex:1 1 440px;min-width:0}
+.sub77-head h2{margin:0;font-size:26px;line-height:1.15;font-weight:650;letter-spacing:-.02em;color:#102f49}
+.sub77-head p{margin:6px 0 0;max-width:720px;font-size:13.5px;line-height:1.5;color:#5d778b}
+.sub77-actions,.sub77-head .lk64-tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sub77-btn,.sub77-head .lk-index{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 14px;border:1px solid #cfdbe4;border-radius:8px;background:#fff;color:#102f49;font:inherit;font-size:13px;font-weight:600;text-decoration:none;cursor:pointer;white-space:nowrap}
+.sub77-btn svg{width:15px;height:15px}
+.sub77-btn:hover,.sub77-head .lk-index:hover{border-color:#102f49;background:#f6f9fb}
+/* figure cards without the blue band */
+.cio51-risk{background:none!important;border:0!important;padding:0!important;margin:0 0 18px!important;border-radius:0!important}
+.lk-shell{padding-top:0!important}
+.lk-shell .sub77-head{margin-top:6px}
+.sub77-head h2,.lk-shell .sub77-head h2,.ws-top .sub77-head h2{font-size:26px!important;line-height:1.15!important;font-weight:650!important;letter-spacing:-.02em!important;margin:0!important;color:#102f49!important}
+.sub77-head p,.lk-shell .sub77-head p{font-size:13.5px!important;line-height:1.5!important;color:#5d778b!important;margin:6px 0 0!important}
+.sub77-select{min-height:42px;padding:0 34px 0 12px;border:1px solid #cfdbe4;border-radius:8px;background-color:#fff;font:inherit;font-size:13px;color:#102f49}
+.ws63-req{margin:0;padding:0;border:0;background:none;box-shadow:none}
+.lk-shell .lk-folder-grid{margin-top:0}
+
+/* ---------- Edition 78 ---------- */
+.cio51-risk.cio78-band{background:#f6f9fb!important;border:1px solid #dfe8ef!important;border-radius:12px!important;padding:18px 20px 20px!important;margin:0 0 18px!important}
+.cio78-band .cio65-summary{margin:0 0 14px}
+.lk78-abbr{margin:12px 2px 0;font-size:12.5px;color:#5d778b}
+.lk78-abbr b{color:#102f49;font-weight:650;margin-right:3px}
+.sub78-primary{background:#b52c41!important;border-color:#b52c41!important;color:#fff!important}
+.sub78-primary:hover{background:#962236!important;border-color:#962236!important}
+.sub77-actions .btn{min-height:42px}
+.ws80-exp{font-weight:600;color:#102f49;display:inline!important}
