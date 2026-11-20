@@ -23,7 +23,7 @@ const shortLabel=l=>String(l||'').replace(/^Indicative target gross IRR$/i,'Targ
 function dealCard51(d){const on=saved.has(d.id);return `<article class="e30-project e51-deal" data-record="${esc(d.id)}"><button class="e51-img" data-detail="${esc(d.id)}" aria-label="View ${esc(d.name)}"><img src="assets/${esc(d.image)}" alt="" loading="lazy"><span class="e51-status">${statusPill(d.status)}</span></button><div class="e30-project-copy"><h3>${esc(d.name)}</h3><p>${esc(d.city)} · ${esc(d.structure)}</p><div class="e51-metrics"><span><small>Minimum ticket</small><b>${money(d.ticket)}</b></span><span><small>${esc(shortLabel(d.metricLabel))}</small><b>${esc(d.metricText)}</b></span><span><small>Indicative term</small><b>${esc(d.tenureText)}</b></span></div><div class="e51-foot"><button class="e51-details" data-detail="${esc(d.id)}">View details <span aria-hidden="true">↗</span></button><button class="e51-save ${on?'saved':''}" data-save="${esc(d.id)}" aria-pressed="${on}" aria-label="${on?'Unsave':'Save'} ${esc(d.name)}">${icon('bookmark')}</button></div></div></article>`}
 const dir=()=>window.SaarthiEdition30?.developerDirectory||[];
 opportunityPage=function(){
- let out=`<section class="e30-op e51-op">${pageHead('Opportunities')}${categoryNav()}`;
+ let out=`<section class="e30-op e51-op">${pageHead('Investment Opportunities')}${categoryNav()}`;
  if(ui.cat===0){const q=ui.query.trim().toLowerCase();const list=dir().filter(p=>[p.name,p.city].join(' ').toLowerCase().includes(q));
   return out+`<div class="e30-toolbar"><div class="searchbox">${icon('search')}<input id="deal-search" type="search" value="${esc(ui.query)}" placeholder="Search developer or city" aria-label="Search developer or city"></div></div><div class="e30-project-grid">${list.map(developerCard).join('')||'<p>No matching developers.</p>'}</div><p class="e30-disclaimer">A listed developer does not imply a verified upcoming launch, allocation, partnership or endorsement. Confirm project status on the linked developer website.</p></section>`}
  out+=`<div class="e30-views">${[['available','Available'],['saved','Bookmarked']].map(([id,label])=>`<button data-op-view="${id}" class="${ui.opView===id?'active':''}">${label}</button>`).join('')}</div>`;
@@ -40,7 +40,6 @@ servicesPage=function(){let html=priorServices();
  html=html.replace(/<aside class="hx-service-requests"[\s\S]*?<\/aside>/,'');
  html=html.replace('<div class="hx-service-layout">','<div class="hx-service-layout e51-svc-single">');
  html=html.replace(/<div class="searchbox">(?:(?!<\/div>)[\s\S])*?id="service-search"[\s\S]*?<\/div>/,'');
- {const arrow='<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg>';const opts=(typeof mandateOptions!=='undefined'?mandateOptions:[]);const card=`<div class="hx-service-group e71-opp"><div class="e71-sum"><span class="hx-service-number">05</span><span class="hx-service-group-icon">${icon('capital')}</span><span class="hx-service-group-title"><strong>Opportunities</strong></span></div><div class="hx-service-items e72-reqs">${opts.map(o=>`<button type="button" data-e72-mandate="${esc(o)}"><span>${esc(o)}</span>${arrow}</button>`).join('')}</div></div>`;const k=html.lastIndexOf('</details>');if(k>-1)html=html.slice(0,k+10)+card+html.slice(k+10);}
  html=html.replace('<p class="hx-service-lead-note">Choose a service and subtype, link a property, then submit your request.</p>','<p class="hx-service-lead-note">Choose a service and subtype, link a property, then submit your request and track progress on a real-time basis.</p>');
  html=html.replace(/<span class="hx-op-eyebrow">\d+ SERVICES ACROSS \d+ AREAS<\/span>/,'');
  html=html.replace(/<details class="hx-service-group" data-hx-service-group="(\d+)" (open)?\s*>/g,(m,i)=>`<details class="hx-service-group" data-hx-service-group="${i}" ${closed51.has(+i)?'':'open'}>`);
@@ -51,7 +50,6 @@ servicesPage=function(){let html=priorServices();
 };
 
 document.addEventListener('click',e=>{const b=e.target.closest('[data-e51-myservices]');if(!b)return;e.preventDefault();try{window.CIOModel.state.tab='services'}catch{}if(location.hash==='#portfolio'){window.render&&window.render()}else location.hash='portfolio';});
-document.addEventListener('click',e=>{const b=e.target.closest('[data-e72-mandate]');if(!b)return;e.preventDefault();if(typeof mandateForm!=='function')return;mandateForm();setTimeout(()=>{const sel=document.querySelector('#mandate-form select[name="mandate"]');if(sel){sel.value=b.dataset.e72Mandate;document.querySelector('#mandate-form input[name="asset"]')?.focus()}},30)});
 /* ---------- Render once more now every script has replaced its page builder ---------- */
 try{if(window.Saarthi&&['opportunities','services','research'].includes(window.Saarthi.ui.page)&&typeof window.render==='function')window.render()}catch{}
 })();

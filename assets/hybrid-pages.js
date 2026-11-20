@@ -12,7 +12,7 @@
   const hxTerm = d => d.cat === 3 ? 'Lease remaining' : d.cat === 1 ? 'Target delivery' : 'Indicative tenure';
   const hxSize = d => [1, 2, 3, 4].includes(d.cat) ? 'Asset / allocation' : 'Issue / project size';
   const hxServiceIcons = ['services', 'residential', 'file', 'chart'];
-  const hxServiceShort = ['Tenants, facilities & upkeep', 'Design, works & delivery', 'Documents, title & succession', 'Pricing, acquisition & disposal'];
+  const hxServiceShort = ['Tenants, facilities & upkeep', 'Property repair works', 'Documents, title & succession', 'Pricing, acquisition & disposal'];
 
   function hxMetric(label, value, accent) {
     return '<div' + (accent ? ' class="hx-deal-metric-accent"' : '') + '><span>' + esc(label) + '</span><strong>' + esc(value) + '</strong></div>';
@@ -47,7 +47,7 @@
     const filterCount = [ui.city, ui.ticket, ui.status].filter(Boolean).length;
     // The visual entry point always agrees with the current filtered register.
     const featured = ds[0];
-    let html = '<div class="hx-op-page">' + pageHead('Opportunities', '<button class="btn light" data-action="mandate">' + icon('plus') + '<span>Submit opportunity</span></button>');
+    let html = '<div class="hx-op-page">' + pageHead('Investment Opportunities', '<button class="btn light" data-action="mandate">' + icon('plus') + '<span>Submit opportunity</span></button>');
     html += '<div class="hx-op-summary"><span><strong>' + deals.filter(d=>d.cat!==0).length + '</strong> investment opportunities</span><span><strong>' + categories.length + '</strong> categories</span><span><strong>' + new Set(deals.map(d => d.city)).size + '</strong> cities</span><span class="hx-op-summary-note">10 developer references · 8 investment opportunities</span></div>';
     html += '<div class="hx-op-viewbar" role="group" aria-label="Opportunity views">' + [['available', 'Available', deals.length], ['saved', 'Saved', saved.size], ['enquiries', 'My enquiries', myRequests.length]].map(([v, label, n]) => '<button data-op-view="' + v + '" class="' + (ui.opView === v ? 'active' : '') + '" aria-pressed="' + (ui.opView === v) + '">' + label + '<span>' + n + '</span></button>').join('') + '</div>';
 

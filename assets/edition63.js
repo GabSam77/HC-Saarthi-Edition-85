@@ -1,6 +1,6 @@
 /* Edition 63: account menu on the avatar, sign out, and a sign-in screen for private pages. */
 (()=>{'use strict';
-const OUT_KEY='hc-saarthi-signed-out',ACCESS_KEY='saarthi-preview-access',PRIVATE=['portfolio','research','opportunities','services'];
+const OUT_KEY='hc-saarthi-signed-out',ACCESS_KEY='saarthi-preview-access',PRIVATE=['portfolio','research','opportunities','financing','services'];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const get=(k,store=localStorage)=>{try{return store.getItem(k)}catch{return null}};
 const set=(k,v,store=localStorage)=>{try{v===null?store.removeItem(k):store.setItem(k,v)}catch{}};
