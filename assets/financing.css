@@ -1,0 +1,19 @@
+.finance-page { margin: 0 auto; max-width: 1360px; color: #12344e; }
+.finance-intro { padding: clamp(12px, 2vw, 30px) 0 clamp(24px, 3vw, 42px); }
+.finance-intro::before { content: ''; display: block; width: 36px; height: 3px; margin-bottom: 18px; background: #bc2c41; }
+.finance-intro h1 { margin: 0 0 12px; font-size: clamp(2rem, 3.3vw, 3.25rem); letter-spacing: -.04em; line-height: 1.1; }
+.finance-intro p, .finance-copy p { color: #526676; font-size: 1rem; line-height: 1.55; }
+.finance-intro p { margin: 0; max-width: 62ch; }
+.finance-products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); }
+.finance-card { overflow: hidden; display: flex; flex-direction: column; background: #fff; border: 1px solid #dce5eb; border-radius: 12px; box-shadow: 0 8px 22px rgba(16, 47, 73, .05); }
+.finance-card img { display: block; width: 100%; height: auto; aspect-ratio: 2.32; object-fit: cover; }
+.finance-copy { flex: 1; display: flex; flex-direction: column; padding: clamp(18px, 2vw, 28px); }
+.finance-copy h2 { font-size: clamp(1.22rem, 1.65vw, 1.55rem); line-height: 1.25; letter-spacing: -.03em; margin: 0; }
+.finance-copy h2 small { font-size: .72em; font-weight: 500; color: #526676; white-space: nowrap; }
+.finance-copy p { margin: 12px 0 25px; }
+.finance-referral { margin-top: auto; padding-top: 14px; border-top: 1px solid #e3e9ee; font-size: .9rem; color: #536b7d; }
+.finance-referral [aria-disabled] { cursor: default; }
+.lp42-viz.finance-home-photo { background: url("residences.png") center 55% / cover; }
+@media (min-width: 1101px) { .lp42-grid:has(.finance-home-photo) { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+@media (min-width: 821px) { .site-header #navigation { justify-content: safe center !important; gap: clamp(10px, 1.35vw, 24px) !important; } }
+@media (max-width: 760px) { .finance-products { grid-template-columns: 1fr; } .finance-card img { max-height: 220px; } }
